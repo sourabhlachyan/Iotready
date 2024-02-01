@@ -35,7 +35,8 @@ function AudioPlayer() {
       audioElement.src = currentFile;
       audioElement.onloadeddata = () => {
         audioElement.currentTime = 0;
-        audioElement.play();
+        // Comment out the following line
+        // audioElement.play();
         audioElement.onloadeddata = null; 
       };
     }
@@ -57,7 +58,7 @@ function AudioPlayer() {
       audioElement.src = file.url;
       audioElement.onloadeddata = () => {
         audioElement.currentTime = 0;
-        audioElement.play();
+        audioElement.play();  // Start the audio here
         audioElement.onloadeddata = null;
       };
     }
